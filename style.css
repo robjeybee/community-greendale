@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'College';
+    src: url('/collegeb.ttf'),
+}
+
+.header-text {
+    background-image: url('/images/Community-Background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'College', serif;
+    font-weight: 800;
+    font-size: 50px;
+    color: #1A3E81;
+    text-shadow: 1px 1px 10px white;
+}
+
+.header-text::before {
+    content: 'Greendale Community College';
+    font-size: 7rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.505);
+    border-radius: .5rem;
+}
+
+.dean-container {
+    margin: 0px 50px 50px 50px;
+    background-color: #dcdcdc;
+    display: flex;
+    height: 600px;
+}
+
+.dean-image {
+    flex-grow: ;
+    background-color: blue;
+}
+
+.dean-text {
+    flex-grow: 1;
+    background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .dean-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        height: auto; /* Reset height to auto for natural content flow */
+        margin: 0; /* Remove horizontal margin */
+    }
+
+    .dean-image, .dean-text {
+        width: 100%; /* Full width for child elements on smaller screens */
+    }
+}
