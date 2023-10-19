@@ -9,58 +9,79 @@
     src: url('/collegeb.ttf'),
 }
 
-.header-text {
+body {
+    margin: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.header {
     background-image: url('/images/Community-Background.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 50px;
     height: 80vh;
+}
+
+.pelton {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.pelton-left {
+    height: 400px;
+    background-image: url('/images/Dean_Craig_Pelton.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'College', serif;
-    font-weight: 800;
-    font-size: 50px;
-    color: #1A3E81;
-    text-shadow: 1px 1px 10px white;
+    align-items: end;
 }
 
-.header-text::before {
-    content: 'Greendale Community College';
-    font-size: 7rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.505);
-    border-radius: .5rem;
+.pelton-left p {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
-.dean-container {
-    margin: 0px 50px 50px 50px;
-    background-color: #dcdcdc;
+
+
+.pelton-right {
+    flex: 1; /* This will make it fill available space */
+    background-color: green;
+    height: 400px;
+    max-width: 100%;
+    min-width: 50%;
+    
+}
+
+.activities {
     display: flex;
-    height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
-.dean-image {
-    flex-grow: ;
-    background-color: blue;
+.activity {
+    background-color: yellow;
+    height: 500px;
+    flex: 1; 
+    min-width: 400px; 
+    max-width: 33%; 
 }
 
-.dean-text {
-    flex-grow: 1;
-    background-color: red;
-}
-
-@media screen and (max-width: 768px) {
-    .dean-container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        height: auto; /* Reset height to auto for natural content flow */
-        margin: 0; /* Remove horizontal margin */
-    }
-
-    .dean-image, .dean-text {
-        width: 100%; /* Full width for child elements on smaller screens */
-    }
+.footer {
+    background-color: orange;
+    height: 10vh;
 }
